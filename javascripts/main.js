@@ -1,15 +1,22 @@
 /* Jquery */
 $(document).ready(function(){
-
-    var touchEvent = $.support.touch ? 'tap' : 'click';
+    $.removePressDownEffect = function()
+    {
+      $('#calculator span').removeClass('pressdown');
+    }
 
     var operand = 0.0;
     var clickOperator = '';
     var dotClicked = false;
-    $(document).on(touchEvent, '#calculator span', function () { 
+    $(document).on('click touch', '#calculator span', function () { 
+
+      $.removePressDownEffect();
+
       var input = $('.result');
       var inputVal = input.html();
       var htmlString = $(this).html();
+
+      $(this).addClass('pressdown');
 
       if ($(this).hasClass('remove')) {
         // Clear 
@@ -49,6 +56,5 @@ $(document).ready(function(){
       } else {
         input.html(inputVal + htmlString);
       }
-
     });
 });

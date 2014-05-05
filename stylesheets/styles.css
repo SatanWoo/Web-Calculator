@@ -57,7 +57,7 @@ html {
   clear: both;
 }
 
-.keys span, .top span{
+.keys span, .top span {
   float: left;
 
   width: 66px;
@@ -72,6 +72,18 @@ html {
   text-align: center;
 
   box-shadow:0px 4px rgba(0, 0, 0, 0.2);
+}
+
+span.pressdown {
+  box-shadow:inset 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+span.operator.pressdown, span.equal.pressdown {
+  box-shadow:inset 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+span.remove.pressdown {
+  box-shadow:inset 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 span.equal {
