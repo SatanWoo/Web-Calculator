@@ -1,10 +1,12 @@
 /* Jquery */
 $(document).ready(function(){
 
+    var touchEvent = $.support.touch ? 'tap' : 'click';
+
     var operand = 0.0;
     var clickOperator = '';
     var dotClicked = false;
-    $(document).on('click', '#calculator span', function () { 
+    $(document).on(touchEvent, '#calculator span', function () { 
       var input = $('.result');
       var inputVal = input.html();
       var htmlString = $(this).html();
