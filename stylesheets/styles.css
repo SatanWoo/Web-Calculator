@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing:border-box;
   font:bold 14px Arial;
+  cursor: pointer;
 }
 
 html {
